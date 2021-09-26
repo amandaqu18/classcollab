@@ -1,1 +1,14 @@
 /* Put any user-specific styles here */
+body {
+    background-color: pink;
+    color: white;
+    font-family: "Comic Sans MS", "Comic Sans", cursive;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+p {
+    color: darkblue;
+}

@@ -9,4 +9,11 @@ module.exports = function(router, username) {
   });
 
   // Set up additional routes here
-};
+  router.get('/' + username + '/about', function(req, res, next) {
+    res.render(username + '/about', {
+      
+      username: username
+   });
+  });
+
+};[]
