@@ -1,1 +1,25 @@
 /* Put any user-specific styles here */
+.p{
+    color: aqua;
+}
+body
+{
+    background-size: 100%;
+background-image: url(https://wallpaperbat.com/img/272544-rottweiler-puppy-grass-walkhd-dog-wallpaper.jpg);
+  color: aqua;
+}
+
+#header {
+    background-color: royalblue;
+    font-size: 20px;
+    fontcolor: black;
+    font-style: italic;
+    padding: 10px;
+}
+#footer {
+    background-color: aqua;
+    font-size: 20px;
+    fontcolor: black;
+    font-style: italic;
+    padding: 10px;
+}
