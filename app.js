@@ -6,6 +6,9 @@ var cookieParser = require('cookie-parser');
 
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+const logger = require('./logger');
+
+logger.info('Application starting...');
 
 var app = express();
 
@@ -19,11 +22,18 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
+//catch all routes and log
+app.use(function(req, res, next){
+logger.debug('Page requested: '+ req.url);
+next();
+});
+
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
+  logger.warn('404 not found: ' + req.url);
   next(createError(404));
 });
 
