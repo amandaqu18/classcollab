@@ -6,7 +6,7 @@ const loggerFormat =
     });
 
 const logger = winston.createLogger({
-    level: 'debug',
+    level: 'info',
     format: winston.format.combine(
         winston.format.colorize(),
         winston.format.timestamp({ format: 'YYYY-MM-DD HH:mm:ss'}),
